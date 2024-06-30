@@ -19,6 +19,13 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+    .page {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .art {
       display: grid;
       grid-template-rows: 414px 130px 155px 20px ;
@@ -75,18 +82,19 @@
 
 <body>
   <!-- Write your HTML here -->
-   <div class="art container">
-    <div class="red"></div>
-    <div class="top-right white"></div>
-    <div class="midle white"></div>
-    <div class="right-midle white"></div>
-    <div class="blue-right"></div>
-    <div class="final-white"></div>
-    <div class="botton white"></div>
-    <div class="yellow"></div>
-    <div class="black"></div>
-
-   </div>
+   <div class="page">
+    <div class="art container">
+      <div class="red"></div>
+      <div class="top-right white"></div>
+      <div class="midle white"></div>
+      <div class="right-midle white"></div>
+      <div class="blue-right"></div>
+      <div class="final-white"></div>
+      <div class="botton white"></div>
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+  </div>
 </body>
 
 </html>
