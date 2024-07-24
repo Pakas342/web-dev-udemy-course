@@ -107,6 +107,6 @@ h3 {
 }
 
 .svg {
-    height: 5vh;
+    height: 30px;
     filter: brightness(0) invert(1);
 }
