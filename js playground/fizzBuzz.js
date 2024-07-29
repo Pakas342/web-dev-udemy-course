@@ -15,5 +15,9 @@ function fizzbuzz() {
     }
     output.push(response);
     console.log(output);
-    count = count + 1
+    count++
+}
+
+while (count <= 100) {
+    fizzbuzz()
 }
