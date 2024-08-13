@@ -10,14 +10,20 @@ function reproduceAudio() {
     sound_url = "./sounds/" + sound_url + ".mp3";
     let sound = new Audio(sound_url)
     sound.play()
+
+    var buttonInnetHtml = this.innerHTML
+    
+    animateOnPress(buttonInnetHtml)
+
 }
 
 document.addEventListener('keydown', reproduceAudioFromKey)
 
 function reproduceAudioFromKey(event) {
-var buttonInnetHtml = event.key;
+var buttonPressed = event.key;
+animateOnPress(buttonPressed)
 
-    switch (buttonInnetHtml) {
+    switch (buttonPressed) {
         case "w" :
             var crash = new Audio("./sounds/crash.mp3");
             crash.play();
@@ -55,4 +61,12 @@ var buttonInnetHtml = event.key;
         
         default: console.log(this)
     }
+}
+
+function animateOnPress(keyPressed) {
+    var activeButton = document.querySelector("." + keyPressed)
+    activeButton.classList.add("pressed")
+    setTimeout(function() {
+        activeButton.classList.remove("pressed")
+    }, 100)
 }
